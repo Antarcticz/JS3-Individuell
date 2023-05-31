@@ -1,0 +1,108 @@
+.registration-page {
+    width: 100%;
+    height: 100vh;
+    padding-top: 10vh;
+    border: 1px solid;
+    border-color: #aeaeae60 transparent transparent transparent;
+
+    .registerText {
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+
+    form {
+        margin: 15px 30px;
+    }
+
+    .reg-row {
+        display: inline-block;
+    }
+
+    .reg-form {
+        display: flex;
+        justify-content: center;
+        width: 99vw;
+        height: 95vh;
+        background-color: #ffffff;
+
+        input,
+        label {
+            display: block;
+            width: 40vw;
+    
+        }
+    
+        .terms{
+        display: flex;
+            
+        }
+    
+        #check {
+            width: 15px;
+            height: 15px;
+            padding: 5px;
+            margin: 0;
+            vertical-align: bottom;
+            position: relative;
+            top: -1px;
+        }
+
+        .terms-label{
+            margin-left: 10px;
+        }
+    
+        #check:hover{
+            cursor: pointer;
+        }
+    
+        input {
+            height: 5vh;
+            margin-bottom: 15px;
+            background-color: #f0f0f0;
+            border: solid #f0f0f0;
+            border-radius: 3px;
+        }
+    
+        input:focus {
+            outline-width: 0;
+        }
+    
+        .input-full-width {
+            width: 99%;
+        }
+    
+        .mg-left {
+            margin-left: 40px;
+            display: block;
+            width: 520px;
+        }
+    
+        .submit {
+            display: block;
+            margin-top: 30px;
+            height: 50px;
+            width: 130px;
+            border: none;
+            background-color: rgb(255, 0, 64);
+            font-size: 1rem;
+            color: #fff;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+    
+        .submit:hover {
+            transition: ease 0, 7ms;
+            background-color: rgb(212, 44, 86);
+    
+    
+        }
+
+        .danger{
+            color: firebrick;
+        }
+    }
+
+   
+
+
+}
