@@ -34,7 +34,7 @@ const Login = () => {
       <div id='login'>
         <form className='form-login' noValidate onSubmit={handleSubmit}>
           <div>
-            <h1>Please Login to Your Account</h1>
+            <h1 className='d-flex justify-content-center align-item-center'>Please Login to Your Account</h1>
           </div>
           <div>
             <Link className='no-account' to={'/Registration'}>Don't have an Account yet?</Link>

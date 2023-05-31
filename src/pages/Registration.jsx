@@ -35,7 +35,7 @@ const Registration = () => {
     <div className='registration-page'>
       <div className="reg-form">
         <form noValidate onSubmit={submit}>
-          <p className='registerText'>Please Register Your new Account</p>
+          <h1 className='registerText d-flex justify-content-center align-item-center pt-4 pb-5'>Please Register Your new Account</h1>
 
           <div className="form-reg-group">
             <label htmlFor="email">E-mail*</label>
