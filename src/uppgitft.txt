@@ -12,11 +12,11 @@ All sidor som behövs för din lösning ska vara byggda med React.js och du ska 
 Alla variabelnamn och funktioners namn ska vara på engelska.
 Du ska kommentera i din kod där det kan vara lämpligt och alla kommentarer skall vara skrivna på engelska.
 Man ska kunna logga in på sidan med ett administratörs konto.
-Du ska lista upp alla produkter i en förenklad lista på en egen sida.
-Man ska kunna få upp information om en enskild produkt på en separat sida.
+Du ska lista upp alla produkter i en förenklad lista på en egen sida. (KLAR)
+Man ska kunna få upp information om en enskild produkt på en separat sida. (KLAR)
 Man ska kunna ändra på och uppdatera en produkt på databasen.
-Man ska kunna ta bort en produkt från databasen.
-Man ska kunna lägga till en ny produkt på databasen.
+Man ska kunna ta bort en produkt från databasen. (KLAR)
+Man ska kunna lägga till en ny produkt på databasen. (KLAR)
 
 
 För betyget väl godkänt (VG):

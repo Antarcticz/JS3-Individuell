@@ -2,12 +2,13 @@ import './App.scss'
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import Navbar from './components/Navbar/Navbar'
 import Home from './pages/Home'
-import Delete from './pages/Delete'
+import Add from './pages/Add'
 import Edit from './pages/Edit'
+import Delete from './pages/Delete'
 import Login from './pages/Login'
 import Registration from './pages/Registration'
+import ProductDetails from './pages/productDetails'
 import Footer from './components/Footer/Footer'
-import Add from './pages/Add'
 
 
 const App = () => {
@@ -20,9 +21,9 @@ const App = () => {
           <Route path='add' element={<Add />} />
           <Route path='edit' element={<Edit />} />
           <Route path='delete' element={<Delete />} />
-          <Route path='edit/:id' element={<Edit />} />
           <Route path='login' element={<Login />} />
           <Route path='registration' element={<Registration />} />
+          <Route path='product-details/:id' element={<ProductDetails />} />
         </Routes>
       </div>
       <Footer />

@@ -7,7 +7,7 @@ const DeleteProducts = ({ products }) => {
 
     return (
         <div className="home-section-2 pb-5">
-            <h2>Delete from Database</h2>
+            <h2>Delete a Product From Database</h2>
             <div className="product-container">
 
                 {

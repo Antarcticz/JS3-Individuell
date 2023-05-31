@@ -8,7 +8,7 @@ const Card = ({ product }) => {
     return (
         
         <div className="card mt-4">
-            <Link to={`/edit/${product.id}`} style={{ textDecoration: 'none' }}>
+            <Link to={`/product-details/${product.id}`} style={{ textDecoration: 'none' }}>
                 <div className="home-product-card">
                     <img className='card-img' src={product.imgUrl} alt={product.productName} />
                     <p className='card-title pt-3'>Name: {product.productName.slice(0, 15)}...</p>

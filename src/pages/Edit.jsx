@@ -1,82 +1,73 @@
 import '../scssPages/edit.scss'
-import React from 'react'
-import useDoc from '../hooks/useDocs'
-import Loader from '../components/Loader/Loader'
-import { FaCartPlus } from 'react-icons/fa'
-import { useParams } from 'react-router-dom'
-import { useDispatch } from 'react-redux'
+import React, { useState } from 'react'
+import { useDispatch, useSelector } from 'react-redux'
+// import { changeProduct } from '../store/features/products/productListSlice'
+import { Navigate } from 'react-router-dom'
 
 
-const ProductDetails = () => {
+const Edit = () => {
 
-  const { id } = useParams()
-  const { data: product, error, loading } = useDoc('products', id)
-  
-  const dispatch = useDispatch()
+    const { user } = useSelector(state => state.auth)
 
-  if (!product) return (
-    <div>
-      {loading && <Loader />}
-      {error && <p>{error}</p>}
-    </div>
-  )
 
-  return (
-    <div className="container-edit">
-      <div className='banner'>
-        <img src="https://static.euronews.com/articles/stories/06/48/94/10/1440x810_cmsv2_72145961-5fb7-5e54-852d-997299cf9e10-6489410.jpg" alt="" />
-      </div>
-      <div className='edit-section-1'>
-        <div className='container-left'>
-          <div className='img-big'>
-            <img src={product.imgUrl} className="img-fluid" />
-          </div>
-          <div className='img-sm'>
-            <img src={product.imgUrl} className="img-fluid" />
-            <img src={product.imgUrl} className="img-fluid" />
-            <img src={product.imgUrl} className="img-fluid" />
-            <img src={product.imgUrl} className="img-fluid" />
-          </div>
+    if (!user) return <Navigate to="/login" replace />
+
+    const dispatch = useDispatch()
+    const [productData, setProductData] = useState({
+        productName: '',
+        price: '',
+        imgUrl: '',
+        description: ''
+    })
+
+    const handleChange = e => {
+        const { id, value } = e.target
+        setProductData(form => {
+            return {
+                ...form,
+                [id]: value
+            }
+        })
+    }
+
+    const handleSubmit = e => {
+        e.preventDefault()
+        const data = {
+            ...productData,
+            price: +productData.price
+        }
+
+        // dispatch(addProduct(data))
+    }
+
+    return (
+        <div className='container-add'>
+            <h1 className='text-center my-5'>Edit a Product</h1>
+            <form noValidate onSubmit={handleSubmit}>
+                <div className="form-group mb-3">
+                    <label htmlFor="id" className="form-label">Product Id:</label>
+                    <input type="text" className="form-control" id='id' value={productData.id} onChange={handleChange} />
+                </div>
+                <div className="form-group mb-3">
+                    <label htmlFor="productName" className="form-label">Product Name:</label>
+                    <input type="text" className="form-control" id='productName' value={productData.productName} onChange={handleChange} />
+                </div>
+                <div className="form-group mb-3">
+                    <label htmlFor="price" className="form-label">Product Price:</label>
+                    <input type="number" inputMode='decimal' className="form-control" id='price' value={productData.price} onChange={handleChange} />
+                </div>
+                <div className="form-group mb-3">
+                    <label htmlFor="imgUrl" className="form-label">Image Url:</label>
+                    <input type="text" className="form-control" id='imgUrl' value={productData.imgUrl} onChange={handleChange} />
+                </div>
+                <div className="form-group mb-3">
+                    <label htmlFor="description" className="form-label">Product Description:</label>
+                    <textarea className='form-control' id="description" rows="3" value={productData.description} onChange={handleChange}></textarea>
+                </div>
+                <button className="general-btn btn-primary">Add Product</button>
+            </form>
         </div>
-        <div className="container-right">
-          <div className="product-info">
-            <h2>{product.productName}</h2>
-            <p>{product.description}</p>
-          </div>
-          <div className="reviews">
-            <div className='stars'>
-              <p>&#9733;&#9733;&#9733;&#9733;&#9733;&nbsp;</p>
-            </div>
-            <div className='review-nr'>
-              <p>16 Reviews</p>
-            </div>
-          </div>
-          <div className="price">
-            <p>${product.price}</p>
-          </div>
-          <div className="addToCart">
-            
-            <button className='btn-minus'>-</button>
-            <div className='count'><p>1</p></div>
-            <button className='btn-plus'>+</button>
-            <button className='general-btn btn-cart'>Add to Cart <FaCartPlus /></button>
-          </div>
-          <div className="product-color">
-            <div className="general-btn red"></div>
-            <div className="general-btn yellow"></div>
-            <div className="general-btn lightblue"></div>
-            <p>SKU:N/A</p>
-          </div>
-          <div className="wishlist">
-            <button className='general-btn btn-wishlist'>Add to wishlist</button>
-          </div>
-          <div className="category">
-            <p>Category: Table Lamp, Light</p>
-          </div>
-        </div>
-      </div>
-    </div>
-  )
+    )
 }
 
-export default ProductDetails
+export default Edit

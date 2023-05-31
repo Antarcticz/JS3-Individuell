@@ -49,7 +49,7 @@ const Add = () => {
                     <li><NavLink to="/products">PRODUCTS</NavLink></li>
                 </ul>
             </div> */}
-            <h1 className='text-center my-5'>Add a new product</h1>
+            <h1 className='text-center my-5'>Add a New Product</h1>
             <form noValidate onSubmit={handleSubmit}>
                 <div className="form-group mb-3">
                     <label htmlFor="productName" className="form-label">Product Name:</label>
