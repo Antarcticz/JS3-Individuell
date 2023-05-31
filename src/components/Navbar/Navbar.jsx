@@ -8,9 +8,10 @@ const Navbar = () => {
             <div className="container-navbar">
                 <Link className="navbar-brand" to="/"><img src="/Placeholders/Logo.svg" alt="" /></Link>
                 <ul className="nav-links gap-5" >
-                    <li><NavLink to="/">PRODUCTS</NavLink></li>
+                    <li><NavLink to="/">HOME</NavLink></li>
                     <li><NavLink to="/add">ADD</NavLink></li>
                     <li><NavLink to="/edit">EDIT</NavLink></li>
+                    <li><NavLink to="/delete">DELETE</NavLink></li>
                     <li><NavLink to="/login"><span>Login</span></NavLink></li>
                 </ul>
             </div>

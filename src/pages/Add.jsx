@@ -42,13 +42,13 @@ const Add = () => {
 
     return (
         <div className='container-add'>
-            <div className="container-admin-navbar">
+            {/* <div className="container-admin-navbar">
                 <ul className='admin-navbar'>
                     <li className='red'><NavLink to="/add">ADD</NavLink></li>
                     <li><NavLink to="/edit">EDIT</NavLink></li>
                     <li><NavLink to="/products">PRODUCTS</NavLink></li>
                 </ul>
-            </div>
+            </div> */}
             <h1 className='text-center my-5'>Add a new product</h1>
             <form noValidate onSubmit={handleSubmit}>
                 <div className="form-group mb-3">

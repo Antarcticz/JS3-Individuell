@@ -1,18 +1,18 @@
-import './Section2.scss'
-import Card from '../../Card/Card'
 import React from 'react'
+import '../Home/Section2/Section2.scss'
+import DeleteCard from './DeleteCard'
 
 
-const Section2 = ({ products }) => {
+const DeleteProducts = ({ products }) => {
 
     return (
         <div className="home-section-2 pb-5">
-            <h2>Products on Database</h2>
+            <h2>Delete from Database</h2>
             <div className="product-container">
 
                 {
                     products.length > 0
-                        ? products.map(product => <Card key={product.id} product={product} />)
+                        ? products.map(product => <DeleteCard key={product.id} product={product} />)
                         : <h2>No products to show</h2>
                 }
 
@@ -22,4 +22,4 @@ const Section2 = ({ products }) => {
 }
 
 
-export default Section2
+export default DeleteProducts
