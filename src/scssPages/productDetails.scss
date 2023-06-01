@@ -26,12 +26,10 @@
             justify-content: flex-start;
             align-items: center;
             width: 40%;
-            // border: 1px solid;
 
             .img-big {
                 padding-bottom: .1rem;
                 width: 100%;
-                // border: 1px solid;
 
                 img {
                     width: 100%;
@@ -46,7 +44,6 @@
                 justify-content: space-between;
                 align-items: center;
                 width: 100%;
-                // border: 1px solid;
 
                 img {
                     width: 24%;
@@ -63,7 +60,6 @@
             align-items: flex-start;
             height: 548.6px;
             width: 50%;
-            // border: 1px solid;
 
             .product-info {
                 display: flex;
@@ -81,76 +77,6 @@
                 }
                 p {
                     color: #616161;
-                }
-            }
-            .reviews {
-                display: flex;
-                flex-direction: row;
-                align-items: center;
-                padding-top: .5rem;
-
-                .stars {
-                    font-size: 2rem;
-                    color: #ffb71b;
-                }
-                .review-nr {
-                    margin-top: .3rem;
-                }
-            }
-            .price {
-                font-size: 1.5rem;
-                font-weight: 600;
-                padding-top: 1.5rem;
-            }
-            .product-color {
-                display: flex;
-                flex-direction: row;
-                justify-content: space-between;
-                align-items: center;
-                width: 180px;
-                padding: 2rem 0 2rem 0;
-
-                .red {
-                    height: 18px;
-                    width: 18px;
-                    border-radius: 50%;
-                    background-color: hsl(351, 95%, 59%);
-
-                    &:hover {
-                        background-color: hsl(351, 95%, 69%);
-                    }
-                    &:active {
-                        background-color: hsl(351, 95%, 49%);
-                    }
-                }
-                .yellow {
-                    height: 18px;
-                    width: 18px;
-                    border-radius: 50%;
-                    background-color: hsl(45, 94%, 59%);
-
-                    &:hover {
-                        background-color: hsl(45, 94%, 69%);
-                    }
-                    &:active {
-                        background-color: hsl(45, 94%, 49%);
-                    }
-                }
-                .lightblue {
-                    height: 18px;
-                    width: 18px;
-                    border-radius: 50%;
-                    background-color: hsl(182, 22%, 65%);
-
-                    &:hover {
-                        background-color: hsl(182, 22%, 75%);
-                    }
-                    &:active {
-                        background-color: hsl(182, 22%, 55%);
-                    }
-                }
-                p {
-                    margin: 0 0 0 2.5rem;
                 }
             }
         }

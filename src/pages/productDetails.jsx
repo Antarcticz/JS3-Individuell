@@ -2,7 +2,7 @@ import '../scssPages/productDetails.scss'
 import React from 'react'
 import useDoc from '../hooks/useDocs'
 import Loader from '../components/Loader/Loader'
-import { useParams } from 'react-router-dom'
+import { useParams, Link } from 'react-router-dom'
 import { useDispatch } from 'react-redux'
 
 
@@ -37,25 +37,19 @@ const ProductDetails = () => {
         </div>
         <div className="container-right">
           <div className="product-info">
-            <h2>{product.productName}</h2>
-            <p>{product.description}</p>
+            <h2>Name: {product.productName}</h2>
+            <p>Description: {product.description}</p>
+            <p>Price: ${product.price}</p>
+            <p>Image URL: {product.imgUrl}</p>
+            <p>Id: {product.id}</p>
           </div>
-          <div className="reviews">
-            <div className='stars'>
-              <p>&#9733;&#9733;&#9733;&#9733;&#9733;&nbsp;</p>
-            </div>
-            <div className='review-nr'>
-              <p>16 Reviews</p>
-            </div>
-          </div>
-          <div className="price">
-            <p>${product.price}</p>
-          </div>
-          <div className="product-color">
-            <div className="general-btn red"></div>
-            <div className="general-btn yellow"></div>
-            <div className="general-btn lightblue"></div>
-            <p>SKU:N/A</p>
+          <div className="btn-group gap-5">
+            <Link to={`/edit`} style={{ textDecoration: 'none' }}>
+              <button className='btn btn-primary btn-lg mt-3'>EDIT</button>
+            </Link>
+            <Link to={`/delete`} style={{ textDecoration: 'none' }}>
+              <button className='btn btn-danger btn-lg mt-3'>DELETE</button>
+            </Link>
           </div>
         </div>
       </div>
