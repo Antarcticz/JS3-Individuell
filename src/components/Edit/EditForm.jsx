@@ -46,7 +46,7 @@ const EditForm = () => {
             <h1 className='text-center my-5'>Edit a Product</h1>
             <form noValidate onSubmit={updateProductToDb}>
                 <div className="form-group mb-3">
-                    <label htmlFor="id" className="form-label">Product Id:</label>
+                    <label htmlFor="id" className="form-label">Existing Product Id:</label>
                     <input type="text" className="form-control" id='id' value={id} onChange={e => productId(e.target.value)} />
                 </div>
                 <div className="form-group mb-3">

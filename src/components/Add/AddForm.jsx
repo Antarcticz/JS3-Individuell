@@ -23,7 +23,7 @@ const AddForm = () => {
         })
     }
 
-    const handleSubmit = e => {
+    const addProductToDb = e => {
         e.preventDefault()
         const data = {
             ...productData,
@@ -36,7 +36,7 @@ const AddForm = () => {
     return (
         <div className='container-form-add'>
             <h1 className='text-center my-5'>Add a New Product</h1>
-            <form noValidate onSubmit={handleSubmit}>
+            <form noValidate onSubmit={addProductToDb}>
                 <div className="form-group mb-3">
                     <label htmlFor="productName" className="form-label">Product Name:</label>
                     <input type="text" className="form-control" id='productName' value={productData.productName} onChange={handleChange} />
